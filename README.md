@@ -5,6 +5,7 @@ The first version of it is in app which was built using Flutter but due to the s
 
 ## Technology
 - Google Apps Script
+
 The source code was hosted in GAS as I am familiar with it because has been used it in my current works.
 
 - Line Messenging API
@@ -13,4 +14,5 @@ The source code was hosted in GAS as I am familiar with it because has been used
   - Reply back the result to the user.
 
 - Google Cloud Vision API
+
 Detect any text in images using pre-trained machine learning model from Google.
