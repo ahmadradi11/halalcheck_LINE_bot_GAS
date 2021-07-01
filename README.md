@@ -1,5 +1,5 @@
 # Halal Check Japan
-Halal Check Japan is a LINE bot that read Japanese text in images and filter out any haram substances from it. 
+Halal Check Japan is a LINE bot that read Japanese text in images and filter out any haram or syubhah substances from it. 
 It aims to help anyone who can't read Japanese to check ingredients of any Japanese products.
 The first version is an app which was built using Flutter but because of the simplicity of the functions, I decided to convert it into a bot.
 
