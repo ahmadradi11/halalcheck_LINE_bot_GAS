@@ -1,5 +1,4 @@
 function getFilteredData(imgId){
-//  imgId = "13115649400741";
   var url = "https://api-data.line.me/v2/bot/message/"+imgId+"/content";
   var headers = {
    "Content-Type": "application/json; charset=UTF-8",
@@ -11,7 +10,7 @@ function getFilteredData(imgId){
    "muteHttpExceptions":true};
   var response = UrlFetchApp.fetch(url, options);
   var img64 = Utilities.base64Encode(response.getContent());
-//  Logger.log(makeRequest(img64));
+
   return filterDataFromVisionApi(makeRequest(img64));
 }
 
@@ -21,19 +20,18 @@ function filterDataFromVisionApi(data) {
   if(!data.responses[0].hasOwnProperty("textAnnotations")) return "no responses";
   //use shift() to delete index 0 object
   data.responses[0].textAnnotations.shift();
-//  toSS(JSON.stringify(data));
-//filter out any non japanese characters
+
+  //filter out any non japanese characters
   var filtered = [];
   data.responses[0].textAnnotations.forEach(d =>{
     var regex = /^[一-龠ぁ-ゔァ-ヴー]+$/g;
     if(regex.test(d.description)) filtered.push(d);
   });
 
-//filtered.forEach(d => Logger.log("filtered: " + d.description));
-
   var detected = [];
   var pattern = getPattern();
-//  scan pattern in filtered data
+  
+  // scan pattern in filtered data
   for (var patt of pattern) {
     var scan_result = scan(filtered, patt);
     if(scan_result){
@@ -42,7 +40,6 @@ function filterDataFromVisionApi(data) {
     }
   }
 
-//  detected.forEach(obj => Logger.log("detected: " + obj.textJapanese));
   return detected;
 }
 
@@ -62,7 +59,6 @@ function scan(list, pattern) {
     //if pattern match partly, insert into matched array
     var index = [];
     if(pattern.textJapanese.match(list[i].description) !== null){
-//      Logger.log(pattern.textJapanese + " : "+list[i].description);
       partialyMatched.push(list[i]);
       index.push(i);
     }
@@ -80,9 +76,7 @@ function scan(list, pattern) {
     var boundingPoly = [];
     partialyMatched.forEach(m => boundingPoly.push(m.boundingPoly));
     
-    var result = {"textJapanese": str, "boundingPoly": boundingPoly, "textEnglish":pattern.textEnglish, "status":pattern.status};
-//    index.forEach(i => delete list[i]);
-  
+    var result = {"textJapanese": str, "boundingPoly": boundingPoly, "textEnglish":pattern.textEnglish, "status":pattern.status};  
     return result;
   }
   return false;
