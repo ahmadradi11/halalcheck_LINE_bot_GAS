@@ -5,7 +5,7 @@ The first version is an app which was built using Flutter but because of the sim
 
 ## Technology
 #### Google Apps Script
-The source code was hosted in GAS because I am familiar with it and has been used it in my current works.
+The source code was hosted in GAS because I am familiar with it and has been used it in my work.
 
 #### Line Messenging API
   - Get the images that user upload to LINE.
