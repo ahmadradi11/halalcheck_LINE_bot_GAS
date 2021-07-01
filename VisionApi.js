@@ -1,17 +1,10 @@
 var APIKey = PropertiesService.getScriptProperties().getProperty('VISIONAPI_KEY');
 
-function doGet() {
-  return HtmlService.createTemplateFromFile('index').evaluate();
-}
-
 function buildJSONRequestImgUrl(img64) {
   return JSON.stringify({
     requests: [{
       image: {
         content : img64
-//        source: {
-//          imageUri: "https://storage.googleapis.com/halal-check-1-vcm/sample_image/1.jpg"
-//        }
       },
       features: [{
         type: "DOCUMENT_TEXT_DETECTION",
@@ -33,6 +26,5 @@ function makeRequest(img64) {
     'payload': JSON_REQ
   };
   var response = UrlFetchApp.fetch(visionApiUrl, options);
-//  Logger.log(response);
   return JSON.parse(response);
 }
