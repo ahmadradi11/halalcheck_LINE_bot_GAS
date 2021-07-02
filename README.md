@@ -20,7 +20,7 @@ Detect any text in images using pre-trained machine learning model from Google.
 # Demo
 
 <p align="center">
-  <img src="./img/example1.gif" alt="example1" width="200" style="margin-right: 50em">
+  <img src="./img/example1.gif" alt="example1" width="200" >
   &nbsp;
-  <img src="./img/example2.gif" alt="example1" width="200" style="margin-left: 50em">
+  <img src="./img/example2.gif" alt="example1" width="200" >
 </p>
