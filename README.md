@@ -17,7 +17,7 @@ The source code is hosted in GAS because I am familiar with it and has been used
 #### Google Cloud Vision API
 Detect any text in images using pre-trained machine learning model from Google.
 
-#Demo
+# Demo
 
 <p align="center">
   <img src="./img/example1.gif" alt="example1" width="300">
