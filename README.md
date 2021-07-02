@@ -24,11 +24,12 @@ There are 3 ways to use this bot.
 
 ## Technology
 #### Google Apps Script
-The source code is hosted in GAS because I am familiar with it and has been used it in my work.
+The source code is hosted in GAS because I am familiar with it and has been used it in my work. The detected text from Cloud Vision will be filtered manually in GAS.
 
 #### Line Messenging API
   - Get the images that user upload to LINE.
   - Send it to Google Cloud Vision in Base64 format.
+  - Filter the detected text.
   - Reply back the result to the user.
 
 #### Google Cloud Vision API
