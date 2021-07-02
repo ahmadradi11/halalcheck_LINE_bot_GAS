@@ -17,7 +17,7 @@ The first version is an app which was built using Flutter but because of the sim
 
 There is 3 ways to use this bot.
 1. Add friend in LINE app using this QR code.
-      <img src="./img/qrcode.jpg" alt="qrcode" align="right" width="100">
+      <img src="./img/qrcode.jpg" alt="qrcode" width="100">
 3. Add friend in LINE app using id: @635pqsrn
 4. Add friend in LINE app using a shared contact from friend.
 
