@@ -19,6 +19,7 @@ There is 3 ways to use this bot.
 1. Add friend in LINE app using this QR code.
 2. Add friend in LINE app using id: @635pqsrn
 3. Add friend in LINE app using a shared contact from friend.
+<img src="./img/qrcode.jpg" alt="logo" align="right" width="100">
 
 ## Technology
 #### Google Apps Script
