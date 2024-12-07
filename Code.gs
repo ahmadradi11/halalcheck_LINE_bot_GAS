@@ -26,9 +26,9 @@ function doPost(e) {
   //Step3. Make request to cloud vision api
   const responseFromCloudVision = getResponseCloudVision(base64Image)
 
-  //Step4. Check if there is any response
-  const isExistResponse = checkResponse(responseFromCloudVision)
-  if (!isExistResponse) {
+  //Step4. Check if there is any text
+  const isExistText = checkResponse(responseFromCloudVision)
+  if (!isExistText) {
     log.push("No text in image.")
     toSS(log)
     return sendMessageToLine(webhookData.replyToken, "Cannot recognize any text in the image. Please send an image of product's label.")
