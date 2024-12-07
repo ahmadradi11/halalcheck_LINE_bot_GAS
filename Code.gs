@@ -1,6 +1,7 @@
 function doPost(e) {
 
   const webhookData = JSON.parse(e.postData.contents).events[0];
+  //log structure = [Date, UserId, ImageId, ReplyToken, Result]
   let log = [new Date(), webhookData.source.userId, webhookData.message.id, webhookData.replyToken]
 
   //Step1. Check message validity
